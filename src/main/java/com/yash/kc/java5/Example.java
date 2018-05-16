@@ -39,6 +39,12 @@ public class Example {
 		
 	}
 	
+	public void  enumTest(){
+		System.out.println(JuicerSpeedState.HIGH.name());
+		JuicerSpeedState state=JuicerSpeedState.valueOf("HIGH");
+		
+	}
+	
 	
 
 }
