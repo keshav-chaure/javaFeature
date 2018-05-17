@@ -1,6 +1,6 @@
 package com.yash.kc.java8;
 
-public class Chimani implements LightEmiter, Fire{
+public class Chimani extends LightEmiter implements  Fire{
 
 	@Override
 	public void emitesLight() {

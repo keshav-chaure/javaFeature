@@ -1,12 +1,12 @@
 package com.yash.kc.java8;
 
-public interface LightEmiter {
+public class LightEmiter {
 
-	String color = "red";
+	static String color = "red";
 	// compile code for above line
 	// public static final String color="red";
-	static void emiteLight(){
-		System.out.println("emite light static ");
+	 public void emiteLight(Lightable l){
+		l.light();
 	}
 
 }
