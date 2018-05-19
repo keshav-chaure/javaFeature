@@ -5,13 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import com.yash.kc.java8.ArrayListEx;
-import com.yash.kc.java8.LightEmiter;
-import com.yash.kc.java8.Marble;
-import com.yash.kc.java8.SimpleFuncInterface;
-import com.yash.kc.java8.Singleton;
-import com.yash.kc.java8.SyskaLight;
-import com.yash.kc.java8.Worker;
+import com.yash.kc.java8.*;
 
 /**
  * Hello world!
@@ -87,10 +81,12 @@ public class App
        //sorting employees array using Comparable interface implementation
          Collections.sort(marbles);
         
-        */
+
          ArrayListEx arrayListEx=new ArrayListEx();
          arrayListEx.demo();
-        
+        */
+        HashMapDemo demo=new HashMapDemo();
+        demo.exampleOne();
       
     }
 }
