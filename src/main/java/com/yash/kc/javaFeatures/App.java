@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.List;
 
+import com.yash.kc.ds.GrowArray;
 import com.yash.kc.java8.*;
 
 /**
@@ -34,68 +36,68 @@ public class App {
 		// java 8 interface static method
 		// LightEmiter.consumes();
 
-		HashMapSyncExample ex = new HashMapSyncExample();
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				System.out.println("One Thread");
-				try {
-					ex.threadDemo();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		}).start();
-
-		// lambda expression to create the object
-		new Thread(() -> {
-			System.out.println("Two Thread");			
-			try {
-				ex.threadDemo();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-		}).start();
-		// lambda expression to create the object
-				new Thread(() -> {
-					System.out.println("Two Thread");			
-					try {
-						ex.threadDemo();
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-
-				}).start();
-
-		// innner class
-		new Worker().carryOutWork(new SimpleFuncInterface() {
-			@Override
-			public void doWork() {
-				// TODO Auto-generated method stub
-				System.out.println("working fine ...");
-
-			}
-		});
-
-		// lambda
-		new Worker().carryOutWork(() -> {
-			System.out.println("Working fine using lambda ");
-		});
-
-		new LightEmiter().emiteLight(() -> System.out.println("emiting light ..."));
-
-		Singleton s = Singleton.getInstance();
-		Singleton s1 = Singleton.getInstance();
-		Singleton s2 = Singleton.getInstance();
-		Singleton s3 = Singleton.getInstance();
-		System.out.println(s);
-		System.out.println(s1);
-		System.out.println(s2);
-		System.out.println(s3);
+//		HashMapSyncExample ex = new HashMapSyncExample();
+//		new Thread(new Runnable() {
+//			@Override
+//			public void run() {
+//				System.out.println("One Thread");
+//				try {
+//					ex.threadDemo();
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//			}
+//		}).start();
+//
+//		// lambda expression to create the object
+//		new Thread(() -> {
+//			System.out.println("Two Thread");			
+//			try {
+//				ex.threadDemo();
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//
+//		}).start();
+//		// lambda expression to create the object
+//				new Thread(() -> {
+//					System.out.println("Two Thread");			
+//					try {
+//						ex.threadDemo();
+//					} catch (InterruptedException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
+//
+//				}).start();
+//
+//		// innner class
+//		new Worker().carryOutWork(new SimpleFuncInterface() {
+//			@Override
+//			public void doWork() {
+//				// TODO Auto-generated method stub
+//				System.out.println("working fine ...");
+//
+//			}
+//		});
+//
+//		// lambda
+//		new Worker().carryOutWork(() -> {
+//			System.out.println("Working fine using lambda ");
+//		});
+//
+//		new LightEmiter().emiteLight(() -> System.out.println("emiting light ..."));
+//
+//		Singleton s = Singleton.getInstance();
+//		Singleton s1 = Singleton.getInstance();
+//		Singleton s2 = Singleton.getInstance();
+//		Singleton s3 = Singleton.getInstance();
+//		System.out.println(s);
+//		System.out.println(s1);
+//		System.out.println(s2);
+//		System.out.println(s3);
 
 		// changed
 		/*
@@ -112,8 +114,21 @@ public class App {
 		 * 
 		 * ArrayListEx arrayListEx=new ArrayListEx(); arrayListEx.demo();
 		 */
-		HashMapDemo demo = new HashMapDemo();
+	/*	HashMapDemo demo = new HashMapDemo();
 		demo.exampleOne();
+		*/
+		
+		 
+		 GrowArray list=new GrowArray();
+		 list.add(1);
+		 list.add(2);
+		 list.add(3);
+		 System.out.println("toString impl : "+list);
 
+Hashtable a;
+		 
+		 
+		
+		
 	}
 }
