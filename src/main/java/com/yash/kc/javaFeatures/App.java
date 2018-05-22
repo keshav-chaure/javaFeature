@@ -125,7 +125,7 @@ public class App {
 		 list.add(3);
 		 System.out.println("toString impl : "+list);
 
-Hashtable a;
+Hashtable a; HashMap h;
 		 
 		 
 		
